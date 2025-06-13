@@ -1,0 +1,58 @@
+@import "tailwindcss";
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.background-day {
+  background-image: url('/back-day.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;;
+}
+
+.background-night {
+  background-image: url('/back-night.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;;
+}
+
+.background-pokedex {
+  background-image: url('/pokedex.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;;
+}
+
+@keyframes fly-left {
+  0% { right: -100px; }
+  100% { right: 100vw; }
+}
+
+@keyframes fly-right {
+  0% { left: -100px; }
+  100% { left: 100vw; }
+}
+
+.animate-mew-left {
+  animation: fly-left 5s linear forwards;
+  position: fixed;
+}
+
+.animate-mew-right {
+  animation: fly-right 5s linear forwards;
+  position: fixed;
+}
