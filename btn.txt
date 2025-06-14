@@ -1,0 +1,6 @@
+                <button
+                  onClick={() => setSelected(null)}
+                  className="absolute top-2 right-2 bg-gray-800 text-gray-100 hover:text-gray-600 text-lg px-2 rounded cursor-pointer"
+                >
+                  ✕
+                </button>
