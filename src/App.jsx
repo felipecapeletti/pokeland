@@ -221,7 +221,7 @@ function App() {
         onClick={toggleNightMode}
         className="w-20 md:w-15 absolute top-40 right-30 md:top-4 md:right-4 bg-gray-800 text-md text-white px-4 py-2 rounded z-50 hover:text-yellow-200 cursor-pointer"
       >
-        {isNight ? <i class="bi bi-sun"></i> : <i class="bi bi-moon"></i>}
+        {isNight ? <i className="bi bi-sun"></i> : <i className="bi bi-moon"></i>}
       </button>
 
       <h1
@@ -340,7 +340,7 @@ function App() {
                   }}
                   className="absolute bottom-20 left-13 md:left-25 bg-gray-900 border-2 border-black text-gray-200 text-xs p-1 px-2 rounded cursor-pointer active:scale-95 transition"
                 >
-                  <i class="bi bi-stars"></i>
+                  <i className="bi bi-stars"></i>
                 </button>
                 {/* Tela Principal */}
                 <div className="absolute top-30 left-10 md:left-20 w-2/3 h-32 background-pokedex border-4 border-gray-400 rounded-lg flex items-center justify-center overflow-hidden z-[-2]">
@@ -405,14 +405,14 @@ function App() {
                     onClick={() => setInfoStep((prev) => Math.max(prev - 1, 0))}
                     disabled={infoStep === 0}
                   >
-                    <i class="bi bi-caret-left"></i>
+                    <i className="bi bi-caret-left"></i>
                   </button>
                   <button
                     className="w-16 h-6 bg-white border-2 border-gray-400 text-gray-800 rounded cursor-pointer active:scale-95 transition"
                     onClick={() => setInfoStep((prev) => Math.min(prev + 1, infoSections.length - 1))}
                     disabled={infoStep === infoSections.length - 1}
                   >
-                    <i class="bi bi-caret-right"></i>
+                    <i className="bi bi-caret-right"></i>
                   </button>
                 </div>
               </div>
