@@ -179,7 +179,7 @@ function App() {
     <div id="stats" key="stats">
       <ul>
         {selected?.stats.map((stat, index) => (
-          <li key={index} className="flex justify-between text-white gap-1 md:gap-4">
+          <li key={index} className="flex justify-between text-sm md:text-md text-white gap-1 md:gap-4">
             <span className="capitalize">{stat.name}</span>
             <span className="font-mono">{stat.base}</span>
           </li>
@@ -232,7 +232,8 @@ function App() {
       </h1>
 
       <div className="w-[100vw] md:w-[60vw] h-fit flex flex-row self-center justify-between items-center p-4 fixed bottom-0">
-        <div className="w-fit h-full flex flex-row items-end mb-20">
+        {/* Sceptile e Personagem */}
+        <div className="absolute bottom-0 left-0 w-fit h-full flex flex-row items-end mb-20">
           <img
             src="/sceptile.gif"
             alt="sceptille"
@@ -246,8 +247,8 @@ function App() {
             style={{ transform: 'scaleX(-1)' }}
           />
         </div>
-
-        <div className="w-fit h-fit flex flex-col items-center mt-6 ml-6 md:mt-0 md:ml-0 gap-4">
+        {/* Pokemon */}
+        <div className="absolute bottom-0 right-0 w-fit h-fit flex flex-col items-center mt-6 ml-6 md:mt-0 md:ml-0 gap-4">
           <input
             type="text"
             placeholder="Pesquisar Pokémon..."
@@ -293,6 +294,7 @@ function App() {
         </div>
       </div>
 
+      {/* Pokedex */}
       {selected && (
         <div
           className="fixed inset-0 bg-black/50 backdrop-blur-sm flex justify-center items-center z-50"
