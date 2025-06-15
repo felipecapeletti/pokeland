@@ -224,12 +224,11 @@ function App() {
         {isNight ? <i className="bi bi-sun"></i> : <i className="bi bi-moon"></i>}
       </button>
 
-      <h1
-        className="fixed self-center text-6xl md:text-8xl text-yellow-400 text-center font-bold mt-20 md:mt-0 z-50"
-        style={{ WebkitTextStroke: '2px black' }}
-      >
-        PokéLand
-      </h1>
+      <img
+        src="/name.png"
+        alt="name"
+        className="fixed self-center w-70 md:w-100 text-yellow-400 text-center font-bold mt-20 md:mt-0 z-50"
+      />
 
       <div className="w-[100vw] md:w-[60vw] h-fit flex flex-row self-center justify-between items-center p-4 fixed bottom-0">
         {/* Sceptile e Personagem */}
