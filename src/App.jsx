@@ -12,7 +12,7 @@ function App() {
   useEffect(() => {
     const getPokemons = async () => {
       try {
-        const res = await axios.get('https://pokeapi.co/api/v2/pokemon?limit=1025');
+        const res = await axios.get('https://pokeapi.co/api/v2/pokemon?limit=649');
         const results = res.data.results;
 
         const detailed = await Promise.all(
