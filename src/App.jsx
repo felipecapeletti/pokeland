@@ -8,16 +8,13 @@ function App() {
   const [isNight, setIsNight] = useState(false);
   const [mewDirection, setMewDirection] = useState('left');
 
-  //Consome API
+ //Consome API
   useEffect(() => {
     const getPokemons = async () => {
       try {
-        const initialRes = await axios.get('https://pokeapi.co/api/v2/pokemon?limit=1');
-        const total = initialRes.data.count;
-  
-        const res = await axios.get(`https://pokeapi.co/api/v2/pokemon?limit=${total}`);
+        const res = await axios.get('https://pokeapi.co/api/v2/pokemon?limit:1025');
         const results = res.data.results;
-  
+
         const detailed = await Promise.all(
           results.map(async (pokemon) => {
             const pokeData = await axios.get(pokemon.url);
@@ -27,17 +24,28 @@ function App() {
               name: data.name,
               sprite: data.sprites?.versions?.['generation-v']?.['black-white']?.animated?.front_default,
               shiny: data.sprites?.versions?.['generation-v']?.['black-white']?.animated?.front_shiny,
+              sound: data.cries?.legacy,
               types: data.types.map(t => t.type.name),
+              weight: data.weight,
+              height: data.height,
+              base_experience: data.base_experience,
+              abilities: data.abilities.map(a => a.ability.name),
+              stats: data.stats.map(stat => ({
+                name: stat.stat.name,
+                base: stat.base_stat
+              })),
+              moves: data.moves.map(m => m.move.name),
+              held_items: data.held_items.map(item => item.item.name),
             };
           })
         );
-  
+
         setPokemons(detailed);
       } catch (err) {
         console.error('Erro ao buscar Pokémons:', err);
       }
     };
-  
+
     getPokemons();
   }, []);
 
