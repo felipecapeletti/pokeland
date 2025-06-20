@@ -208,14 +208,6 @@ function App() {
       {/* Audio player oculto */}
       <audio ref={audioRef} src="/theme.mp3" autoPlay loop />
 
-      {/* Botão para mutar/desmutar */}
-      <button
-        onClick={toggleMute}
-        className="w-20 md:w-15 absolute top-40 right-51 md:top-4 md:right-20 bg-gray-800 text-md text-white px-4 py-2 rounded z-50 hover:text-yellow-200 cursor-pointer"
-      >
-        <i className={`bi ${isMuted ? 'bi-volume-mute-fill' : 'bi-volume-up-fill'}`}></i>
-      </button>
-
       {/* Botão para mudar o horário */}
       <button
         onClick={toggleNightMode}
