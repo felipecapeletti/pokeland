@@ -341,7 +341,7 @@ function App() {
                     id="screen-sprite"
                     src={selected.sprite}
                     alt={selected.name}
-                    className="w-1/3 h-fit object-contain"
+                    className="w-[40%] h-fit object-contain"
                   />
                 </div>
                 {/* Nome do Pokemon */}
